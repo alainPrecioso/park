@@ -7,7 +7,7 @@ import java.io.*;
 
 public abstract class Ser {
 
-	public void save(String fileName, Object object) {
+	public static void save(String fileName, Object object) {
 		try {
 			saveXML(fileName, object);
 		} catch (IOException e) {
@@ -17,7 +17,7 @@ public abstract class Ser {
 		
 	}
 	
-	public Object load(String path) {
+	public static Object load(String path) {
 		Object serial = null;
 		try {
 			serial = loadXML(path);
@@ -31,7 +31,7 @@ public abstract class Ser {
 		return serial;
 	}
 	
-	public void saveXML(String fileName, Object object) throws IOException {
+	public static void saveXML(String fileName, Object object) throws IOException {
 		fileName += ".xml";
 		FileOutputStream fileOut = new FileOutputStream(fileName);
 		XMLEncoder out = new XMLEncoder(fileOut);
@@ -40,7 +40,7 @@ public abstract class Ser {
 		fileOut.close();
 	}
 	
-	public Object loadXML(String path) throws IOException, ClassNotFoundException {
+	public static Object loadXML(String path) throws IOException, ClassNotFoundException {
 		Object serial = null;
 		FileInputStream fileIn = new FileInputStream(path);
 		XMLDecoder in = new XMLDecoder(fileIn);

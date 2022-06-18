@@ -8,7 +8,7 @@ import utils.Ser;
 public class Manufacturers {
 
 	public static void main(String[] args) {
-		ArrayList<String> manufacturers = (ArrayList<String>) Ser.load("manufacturers.xml");
+		ArrayList<String> manufacturers = new ArrayList<String>();
 		
 		Collections.addAll(manufacturers, "Citronelle", "Roulenot", "Totoya" , "BMVV", "Mercedes Bendz", "Volkswagen",
 				"Oneessan", "Honda", "Audi", "Chevrolet", "Hyundai", "Lexus", "Subaru", "Land Rover", "Ferrari", "Kia",
