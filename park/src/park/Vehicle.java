@@ -25,13 +25,21 @@ public abstract class Vehicle {
 	
 	
 	public static Vehicle vehicle() {
-		switch (ThreadLocalRandom.current().nextInt(0, 2)) {
+		switch (ThreadLocalRandom.current().nextInt(0, 12)) {
 		case 0 : //Car
-			return new Car(0);
 		case 1 : 
-			return new Motorcycle(0);
 		case 2 :
-			break;
+		case 3 :
+		case 4 :
+		case 5 :
+		case 6 :
+		case 7 :
+		case 8 :
+			return new Car(0);
+		case 9 :
+		case 10 :
+		case 11 :
+			return new Motorcycle(0);
 		}
 		return null;		
 		

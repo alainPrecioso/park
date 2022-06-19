@@ -30,6 +30,7 @@ public class Car extends Vehicle implements Serializable {
 		plate = randomPlate();
 		manufacturer = randomManufacturer();
 		model = randomModel();
+		color = randomColor();
 		
 	}
 	
