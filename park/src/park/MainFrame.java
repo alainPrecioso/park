@@ -90,7 +90,7 @@ public class MainFrame extends JFrame {
 				
 				
 				park.parkAdd(spot, carsJList.getSelectedValuesList().get(0));
-				arrlist.remove(spot);
+				arrlist.remove(carsJList.getSelectedIndex());
 				carsJList.setListData(arrlist.toArray());
 				parkJList.setListData(park.getPark());
 				
